@@ -1,8 +1,13 @@
-# Jogo da Velha — Assembly 8086
+<h1 align="center"> Jogo da Velha — Assembly 8086</h1>
 
-Implementação completa do clássico **Jogo da Velha (Tic-Tac-Toe)** em linguagem Assembly para o processador Intel 8086, desenvolvido como projeto avaliativo da disciplina de **Organização de Sistemas Computacionais** na PUC-Campinas (2025).
+> A complete Tic-Tac-Toe implementation in Assembly 8086 with PvP and PvC (AI) modes.
 
----
+<p align="center">
+  <img src="https://img.shields.io/badge/Assembly-8086-6E4C13?style=flat-square&logo=intel&logoColor=white" alt="Assembly 8086"/>
+  <img src="https://img.shields.io/badge/License-MIT-22c55e?style=flat-square" alt="MIT License"/>
+  <img src="https://img.shields.io/badge/Platform-MS--DOS%20%7C%20DOSBox-blue?style=flat-square" alt="Platform"/>
+  <img src="https://img.shields.io/badge/Status-Complete-success?style=flat-square" alt="Status"/>
+</p>
 
 ## Sobre o Projeto
 
