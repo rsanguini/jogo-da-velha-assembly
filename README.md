@@ -30,6 +30,46 @@ The implementation explores low-level programming concepts including direct memo
 
 ---
 
+## How to Play
+
+### Menu
+```
+JOGO DA VELHA - 8086
+Escolha o modo de jogo:
+1 - Jogador vs Jogador
+2 - Jogador vs Computador
+Opcao: _
+```
+
+### Board
+```
+   1   2   3
+1    |   |
+  -----------
+2    |   |
+  -----------
+3    |   |
+```
+
+Enter the **row** (1-3) and **column** (1-3) to place your mark. Player X goes first.
+
+---
+
+## AI Strategy
+
+The computer opponent (Player O) uses a deterministic priority-based algorithm:
+
+| Priority | Action | Description |
+|----------|--------|-------------|
+| 1 | **Win** | Completes a line if two pieces are already placed |
+| 2 | **Block** | Prevents the human from winning on the next move |
+| 3 | **Center** | Takes the center cell (index 4) if available |
+| 4 | **Fallback** | Picks the first empty cell on the board |
+
+This guarantees the AI never loses when it moves first and always blocks immediate threats.
+
+---
+
 ## 📁 Estrutura do Repositório
 
 ```
