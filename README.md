@@ -235,12 +235,14 @@ jogo-da-velha-assembly/
 
 ### With MASM
 ```
+cd src
 MASM jogo_da_velha.asm;
 LINK jogo_da_velha.obj;
 ```
 
 ### With TASM
 ```
+cd src
 TASM jogo_da_velha.asm
 TLINK jogo_da_velha.obj
 ```
@@ -265,6 +267,7 @@ jogo_da_velha.exe
 ```
 mount c c:\path\to\project
 c:
+cd src
 jogo_da_velha.exe
 ```
 
