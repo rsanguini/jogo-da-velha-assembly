@@ -140,52 +140,54 @@ jogo-da-velha-assembly/
 
 ---
 
-## Como Compilar
+## ⚙️ Compilation
 
-Você precisará do **MASM** ou **TASM** instalado em um ambiente MS-DOS (ou emulador).
+### Requirements
 
-**Com MASM:**
+- **MASM** or **TASM** assembler
+- MS-DOS environment or **DOSBox** emulator
+
+### With MASM
 ```
-MASM Jogo_da_velha.asm;
-LINK Jogo_da_velha.obj;
+MASM jogo_da_velha.asm;
+LINK jogo_da_velha.obj;
 ```
 
-**Com TASM:**
+### With TASM
 ```
-TASM Jogo_da_velha.asm
-TLINK Jogo_da_velha.obj
+TASM jogo_da_velha.asm
+TLINK jogo_da_velha.obj
 ```
+
+### Alternative: VSCode + ASM Extension
+
+1. Install the [ASM Code Lens](https://marketplace.visualstudio.com/items?itemName=maziac.asm-code-lens) extension
+2. Configure MASM/TASM in your environment
+3. Open `src/jogo_da_velha.asm`
+4. Right-click → **Run ASM Code**
 
 ---
 
-## Como Executar
+## ▶️ Execution
 
-**No MS-DOS:**
+### MS-DOS
 ```
-Jogo_da_velha.exe
+jogo_da_velha.exe
 ```
 
-**No Windows moderno (via [DOSBox](https://www.dosbox.com)):**
+### DOSBox (modern Windows)
 ```
-mount c c:\caminho\para\a\pasta
+mount c c:\path\to\project
 c:
-Jogo_da_velha.exe
+jogo_da_velha.exe
 ```
 
-> Requisitos mínimos: MS-DOS ou emulador compatível · Processador Intel 8086 ou superior · 64 KB de RAM
+> **Minimum requirements:** MS-DOS or compatible emulator · Intel 8086+ · 64 KB RAM
 
 ---
 
-**OU**
-```
-1- Faça o fork do projeto dentro do Github para o seu dispositivo
-2- Baixe o MASM/TASM dentro do VSCode (assim fica possível a ultilização de códigos Assembly)
-3- Abra o arquivo que foi salvo
-4- Abra o arquivo "Jogo_da_velha.asm" no VSCode
-5- Aperte com o botão direito do mouse na tela do código
-6- Selecione a opção "Run ASM code"
-7- Aproveite o jogo!!
-```
+
+
 
 ## Como Jogar
 
