@@ -69,6 +69,50 @@ The computer opponent (Player O) uses a deterministic priority-based algorithm:
 This guarantees the AI never loses when it moves first and always blocks immediate threats.
 
 ---
+## 🏗️ Architecture
+
+### Memory Model
+```asm
+.MODEL SMALL
+.STACK 100h
+```
+
+### Data Segment
+```asm
+tabuleiro           DB 9 DUP(' ')   ; 3x3 board as a linear array
+modo_jogo           DB 0            ; 1 = PvP, 2 = PvC
+jogador_atual       DB 'X'          ; current player symbol
+jogadas_realizadas  DB 0            ; move counter (draw at 9)
+```
+
+### Coordinate → Index Conversion
+```asm
+; index = (row - 1) × 3 + (col - 1)
+DEC BL       ; row - 1
+DEC BH       ; col - 1
+MOV AL, BL
+MOV CL, 3
+MUL CL       ; AL = (row - 1) × 3
+ADD AL, BH   ; AL = final index
+```
+
+### Key Procedures
+
+| Procedure | Responsibility |
+|-----------|---------------|
+| `MAIN` | Game loop, menu, win/draw detection |
+| `INICIALIZAR_JOGO` | Resets board and control variables |
+| `MOSTRAR_TABULEIRO` | Renders the 3×3 grid to screen |
+| `REALIZAR_JOGADA_HUMANO` | Reads, validates, and applies human input |
+| `REALIZAR_JOGADA_COMPUTADOR` | Executes AI logic for computer moves |
+| `TENTAR_COMPLETAR_LINHA` | Detects "2 pieces + 1 empty" pattern |
+| `VERIFICAR_VITORIA` | Checks all 8 winning combinations |
+| `TROCAR_JOGADOR` | Alternates between X and O |
+| `LIMPAR_TELA` | INT 10h scroll-up screen clear |
+| `IMPRIMIR_STRING` | INT 21h/09h string output |
+| `LER_CARACTERE` | INT 21h/01h character input with echo |
+
+---
 
 ## 📁 Estrutura do Repositório
 
