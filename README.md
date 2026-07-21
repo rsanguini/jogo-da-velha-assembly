@@ -9,9 +9,24 @@
   <img src="https://img.shields.io/badge/Status-Complete-success?style=flat-square" alt="Status"/>
 </p>
 
-## Sobre o Projeto
+---
 
-O programa simula o jogo da velha em modo texto, permitindo partidas entre **dois jogadores humanos** ou entre um **jogador humano e o computador**. Todo o código foi escrito em Assembly 8086 puro, explorando manipulação direta de memória, registradores, pilha e interrupções do DOS/BIOS.
+## Overview
+
+This project is a fully functional Tic-Tac-Toe game written in pure Assembly 8086, running in text mode on MS-DOS (or DOSBox). It features two game modes: **Player vs Player** and **Player vs Computer** with a rule-based AI opponent.
+
+The implementation explores low-level programming concepts including direct memory manipulation, register operations, stack management, and DOS/BIOS interrupts — all without any high-level abstractions.
+
+---
+
+## Features
+
+- **Two game modes** — PvP (human vs human) and PvC (human vs AI)
+- **Rule-based AI** — the computer opponent follows a priority strategy: win → block → center → first available
+- **Input validation** — rejects invalid positions and occupied cells
+- **Replay system** — play again without restarting the program
+- **30+ procedures** — modular code organized with `CALL`/`RET` and stack preservation
+- **980 lines** of pure Assembly 8086 with no external libraries
 
 ---
 
