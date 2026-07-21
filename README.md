@@ -11,7 +11,7 @@
 
 ---
 
-## Overview
+## 📖 Overview
 
 This project is a fully functional Tic-Tac-Toe game written in pure Assembly 8086, running in text mode on MS-DOS (or DOSBox). It features two game modes: **Player vs Player** and **Player vs Computer** with a rule-based AI opponent.
 
@@ -19,7 +19,7 @@ The implementation explores low-level programming concepts including direct memo
 
 ---
 
-## Features
+## ✨ Features
 
 - **Two game modes** — PvP (human vs human) and PvC (human vs AI)
 - **Rule-based AI** — the computer opponent follows a priority strategy: win → block → center → first available
