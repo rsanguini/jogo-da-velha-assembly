@@ -30,7 +30,7 @@ The implementation explores low-level programming concepts including direct memo
 
 ---
 
-## How to Play
+## 🎯 How to Play
 
 ### Menu
 ```
@@ -52,6 +52,92 @@ Opcao: _
 ```
 
 Enter the **row** (1-3) and **column** (1-3) to place your mark. Player X goes first.
+
+---
+
+### Full Walkthrough
+
+#### 1. Starting the Game
+
+Run the program and choose a game mode:
+
+- **Option 1 (PvP):** Two human players take turns. Player X starts, then Player O.
+- **Option 2 (PvC):** You play as X against the computer (O). You always move first.
+
+#### 2. Making a Move
+
+On your turn, the game asks for a row and a column:
+```
+Vez do Jogador X
+Digite a linha (1-3): 2
+Digite a coluna (1-3): 2
+```
+
+The game validates your input:
+
+- **Invalid position** (outside 1-3 range) → error message, try again
+- **Occupied cell** → error message, try again
+- **Valid move** → your mark is placed and the board is redrawn
+
+After a valid move, the turn switches to the other player (or the computer).
+
+#### 3. Winning the Game
+
+The first player to align **three identical marks** in a row wins. Winning combinations include:
+
+- **3 horizontal rows** (e.g., row 1: cells 1, 2, 3)
+- **3 vertical columns** (e.g., col 1: cells 1, 4, 7)
+- **2 diagonals** (cells 1, 5, 9 or 3, 5, 7)
+
+When someone wins, the game displays the victory message:
+```
+----JOGADOR X VENCEU!----
+```
+
+#### 4. Draw
+
+If all 9 cells are filled and no player has three in a row, the game ends in a draw:
+```
+----EMPATE!----
+```
+
+#### 5. Replay
+
+After a win or draw, the game asks if you want to play again:
+```
+Deseja jogar novamente? (S/N): _
+```
+
+Type `S` to start a new match or `N` to exit the program.
+
+---
+
+### 💡 Tips & Strategy
+
+#### Player vs Player (PvP)
+
+| Tip | Explanation |
+|-----|-------------|
+| **Take the center first** | The center cell (2,2) is part of 4 winning lines (2 diagonals + 1 row + 1 column). Controlling it gives you the most options. |
+| **Watch the corners** | Corners (1,1), (1,3), (3,1), (3,3) are part of 3 winning lines each. If you can't take the center, grab a corner. |
+| **Always block** | If your opponent has two marks in a line, block the third cell immediately. Failing to block = instant loss. |
+| **Create forks** | A fork is when you create two winning threats at the same time. Your opponent can only block one — you win on the next move. |
+| **Avoid edges early** | Edge cells (1,2), (2,1), (2,3), (3,2) are part of only 2 winning lines each. They are the weakest starting positions. |
+
+<br>
+
+#### Player vs Computer (PvC)
+
+The AI follows a fixed priority: **win → block → center → first available**. Here's how to exploit it:
+
+| Tip | Explanation |
+|-----|-------------|
+| **You move first — use it** | Since you always play X and go first, take the center. This forces the AI into a reactive position. |
+| **Force a fork** | Place your first mark in a corner (e.g., 1,1). If the AI takes the center, play the opposite corner (3,3). You now have two diagonal threats — the AI can only block one. |
+| **The AI never loses when it can win** | If the AI has two in a line, it will always complete it. Never leave a winning move open for the computer. |
+| **The AI always blocks** | If you have two in a line, the AI will block. Use this to predict its moves and set up forks. |
+| **Best you can do is draw** | With perfect play from both sides, Tic-Tac-Toe always ends in a draw. Your goal against the AI is to not make mistakes — the AI won't either. |
+| **Trap with corners** | Open with a corner. If the AI takes an edge (not the center), you can force a win by creating a fork. |
 
 ---
 
