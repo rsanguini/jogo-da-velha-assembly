@@ -114,12 +114,27 @@ ADD AL, BH   ; AL = final index
 
 ---
 
-## 📁 Estrutura do Repositório
+## 🔌 Interrupts Used
 
+| Interrupt | Function | Usage |
+|-----------|----------|-------|
+| `INT 21h / 01h` | Read char with echo | Player input |
+| `INT 21h / 02h` | Print char | Board rendering |
+| `INT 21h / 09h` | Print `$`-terminated string | UI messages |
+| `INT 21h / 08h` | Read char without echo | Pause between turns |
+| `INT 21h / 4Ch` | Terminate program | Exit |
+| `INT 10h / 06h` | Scroll up | Clear screen |
+| `INT 10h / 02h` | Set cursor position | Reposition after clear |
+
+---
+
+## 📂 Project Structure
 ```
-├── Código
-├     ├─ Jogo_da_velha.asm       # Código-fonte em Assembly 8086
-├
+jogo-da-velha-assembly/
+├── src/
+│   └── jogo_da_velha.asm    # Source code (980 lines)
+├── .gitignore
+├── LICENSE
 └── README.md
 ```
 
