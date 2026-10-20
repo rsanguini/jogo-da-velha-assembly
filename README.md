@@ -1,4 +1,4 @@
-# 🎮 Jogo da Velha — Assembly 8086
+#  Jogo da Velha — Assembly 8086
 
 > Uma implementação completa do Jogo da Velha em Assembly 8086, com modos Jogador vs. Jogador e Jogador vs. Computador (IA).
 
@@ -11,7 +11,7 @@
 
 ---
 
-## 📖 Visão geral
+##  Visão geral
 
 Este projeto é um jogo da velha totalmente funcional, desenvolvido em Assembly 8086 puro e executado em modo texto no MS-DOS ou no emulador DOSBox. O jogo possui dois modos: **Jogador vs. Jogador** e **Jogador vs. Computador**, com um oponente controlado por uma inteligência artificial baseada em regras.
 
@@ -19,7 +19,7 @@ A implementação explora conceitos de programação de baixo nível, incluindo 
 
 ---
 
-## ✨ Funcionalidades
+##  Funcionalidades
 
 - **Dois modos de jogo** — PvP (jogador contra jogador) e PvC (jogador contra inteligência artificial).
 - **IA baseada em regras** — o computador segue uma estratégia de prioridades: vencer → bloquear → ocupar o centro → primeira posição disponível.
@@ -30,7 +30,7 @@ A implementação explora conceitos de programação de baixo nível, incluindo 
 
 ---
 
-## 🎯 Como jogar
+##  Como jogar
 
 ### Menu
 
@@ -118,7 +118,7 @@ Digite `S` para começar uma nova partida ou `N` para encerrar o programa.
 
 ---
 
-### 💡 Dicas e estratégias
+###  Dicas e estratégias
 
 #### Jogador vs. Jogador (PvP)
 
@@ -145,7 +145,7 @@ A IA segue uma prioridade fixa: **vencer → bloquear → centro → primeira po
 
 ---
 
-## 🤖 Estratégia da inteligência artificial
+##  Estratégia da inteligência artificial
 
 O oponente controlado pelo computador (jogador O) utiliza um algoritmo determinístico baseado em prioridades:
 
@@ -160,7 +160,7 @@ Essa estratégia permite que a IA aproveite oportunidades de vitória e bloqueie
 
 ---
 
-## 🏗️ Arquitetura
+##  Arquitetura
 
 ### Modelo de memória
 
@@ -208,7 +208,7 @@ ADD AL, BH   ; AL = índice final
 
 ---
 
-## 🔌 Interrupções utilizadas
+##  Interrupções utilizadas
 
 | Interrupção | Função | Utilização |
 |---|---|---|
@@ -222,7 +222,7 @@ ADD AL, BH   ; AL = índice final
 
 ---
 
-## 📂 Estrutura do projeto
+##  Estrutura do projeto
 
 ```text
 jogo-da-velha-assembly/
@@ -235,7 +235,7 @@ jogo-da-velha-assembly/
 
 ---
 
-## ⚙️ Compilação
+##  Compilação
 
 ### Requisitos
 
@@ -267,7 +267,7 @@ TLINK jogo_da_velha.obj
 
 ---
 
-## ▶️ Execução
+##  Execução
 
 ### MS-DOS
 
@@ -288,7 +288,7 @@ jogo_da_velha.exe
 
 ---
 
-## 🧠 Conceitos aplicados
+##  Conceitos aplicados
 
 - **Saltos condicionais** — utilização de `JE`, `JNE`, `JL`, `JG`, `JB` e `JA` para controle de fluxo.
 - **Sub-rotinas** — mais de 30 procedimentos organizados com `CALL` e `RET`.
@@ -299,7 +299,7 @@ jogo_da_velha.exe
 
 ---
 
-## 📚 Referências
+##  Referências
 
 - ABEL, Peter. *IBM PC Assembly Language and Programming*. 5ª ed. Pearson, 2001.
 - Intel Corporation. *8086 Family User's Manual*. 1979.
@@ -307,7 +307,7 @@ jogo_da_velha.exe
 
 ---
 
-## 👤 Autor
+##  Autor
 
 **Rafael Sanguini Colagrossi** <br> 
 --  Desenvolvedor de software apaixonado por Códigos, Inteligência Artificial, Tecnologia e Desenvolvimento Full-Stack.
